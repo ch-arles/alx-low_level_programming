@@ -27,7 +27,7 @@ void check_elf(unsigned char *e_ident)
 {
 	int index;
 
-	for (index = 0; index < 4; index++)
+		for (index = 0; index < 4; index++)
 	{
 		if (e_ident[index] != 127 &&
 		    e_ident[index] != 'E' &&
@@ -308,7 +308,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
 
-    free(header);
+	free(header);
 	close_elf(o);
 	return (0);
 }
